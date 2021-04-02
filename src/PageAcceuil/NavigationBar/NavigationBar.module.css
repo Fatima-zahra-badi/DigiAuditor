@@ -1,29 +1,29 @@
 
 
-ul {
+.menuPage {
     list-style-type: none;
     overflow: hidden;
     background-color: white;
     position: fixed;
-    top: 0; 
-    margin-left:28%;
-    
+    top: 0;
+    margin-left: 28%;
+    float:left;
 }
 
-li {
+.lienPage{
     float: left;
 }
 
-li a {
-        display: block;
-        color: black;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-    }
-li a:hover:not(.active) {
-            background-color:darkorange;
-        }
+.lienPage a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.lienPage a:hover:not(.active) {
+    background-color: darkorange;
+}
 
 .active {
    
@@ -34,8 +34,43 @@ li a:hover:not(.active) {
 }
 
 .imagecover {
-    width: 70px;
-    height: 50px;
-    border-radius: 30%; 
-   float:right;
+    width: 60px;
+    height: 40px;
+    border-radius: 30%;
 }
+.dropbtn {
+   background-color:white;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    float:right;
+    width : 10%;
+}
+
+.dropdowncontent {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    .dropdowncontent button {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        border:none;
+    }
+
+        .dropdowncontent button:hover {
+            background-color: #ddd;
+        }
+
+.dropdown:hover .dropdowncontent {
+    display: block;
+}
+
