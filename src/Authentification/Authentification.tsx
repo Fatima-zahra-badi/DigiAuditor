@@ -1,20 +1,14 @@
 import React from 'react';
-import AuthentificationHTML from './AuthentificationDesign/AuthentificationDesign';
+import { Route } from 'react-router-dom';
+import Authentification from './PageAuthentification/PageAuthentification';
+import PageAcceuil from '../PageAcceuil/PageAcceuil';
 
-
-/*   type AuthentificationProps = {
-    username: string,
-    password: string 
-}*/
-class Authentification extends React.Component{
-    render(){
+const authentification = () => {
     return (
-        <AuthentificationHTML />  
-       
-                   
+        <div>
+            <Route path='/' exact component={Authentification} />
+            <Route path='/acceuil' exact component={PageAcceuil} />
+        </div>
     );
-
 }
-       
-}
-export default Authentification;
+export default authentification;

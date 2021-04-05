@@ -2,12 +2,11 @@ import React from 'react';
 import classes from './AuthentificationCSS.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import pathLogo from "../../assets/pp.jpg";
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
-import PageAcceuil from '../../PageAcceuil/PageAcceuil';
-import Authentification from '../Authentification';
+import { Link} from 'react-router-dom';
+
 const AuthentificationDesign = () => {
     return (
-        <body>
+        <body className={classes.body}>
             <div className={classes.container}>
                <form className={classes.formsignin + ' ' + "rounded - sm shadow"} >
                    <div className="mx-auto" style={{ width: "200px" }}><img className={"mb-4" + ' ' + classes.logo} src={pathLogo} alt="Logo" /></div>
@@ -26,7 +25,7 @@ const AuthentificationDesign = () => {
                                <a className={classes.forgot} href="#">Forgot password?</a>
                                            </div>
 
-                                <button className={"btn btn-lg btn-dark btn-block"}>Login</button>
+                            <Link to={'/acceuil'}> <button className={"btn btn-lg btn-dark btn-block"}>Login</button></Link>
                                                 <p className="mt-4 mb-0 text-muted small">IA Creator works best with Google Chrome, Mozilla Firefox and Safari</p>
                                             </div>
 
@@ -38,7 +37,7 @@ const AuthentificationDesign = () => {
                
   
 </body>
-                             );
+                         );
    
 }
 

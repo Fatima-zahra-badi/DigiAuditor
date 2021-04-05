@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import classes from '../../GestionMissions/AjoutMission/AjouterMission.module.css';
-import Button from '../../GestionMissions/Button/Button';
+import classes from '../GestionMissions/AjoutMission/AjouterMission.module.css';
+import Button from '../GestionMissions/Button/Button';
 const modifierProfile = (props: any) => {
     return (
         <body
@@ -17,7 +17,7 @@ const modifierProfile = (props: any) => {
                     <form>
                         <fieldset>
                             <legend style={{ textAlign: "center", color: "red", fontStyle: "italic", fontWeight: "bold" }}>Modifier Profile</legend>
-
+                            
                             <div className="form-group">
 
                                 <input type="text" className="form-control" id="nom" placeholder="Nom et Prenom" />

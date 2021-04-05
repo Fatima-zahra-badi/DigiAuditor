@@ -1,10 +1,11 @@
 import React from 'react';
-import Authentification from './Authentification/Authentification'; 
-
-import PageAcceuil from './PageAcceuil/PageAcceuil';
+import Authentification from './Authentification/authentification'; 
+import { BrowserRouter } from 'react-router-dom';
 function App() {
     return (
-        <PageAcceuil/>
+        <BrowserRouter>
+            <Authentification />
+          </BrowserRouter>
             )
 }
 export default App;

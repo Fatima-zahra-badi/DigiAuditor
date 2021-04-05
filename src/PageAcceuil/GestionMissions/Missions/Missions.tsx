@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
-import { Table, Button } from 'reactstrap';
+import { Table } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
-import AjouterMission from './AjoutMission/AjouterMission';
-import ModifierMission from './ModifMission/ModifierMission';
+import {Link} from 'react-router-dom';
+import AjouterMission from '../AjoutMission/AjouterMission';
+import ModifierMission from '../ModifMission/ModifierMission';
+
 class DataTable extends Component {  
      state = {
          ajout: false,
@@ -14,6 +15,7 @@ class DataTable extends Component {
             ajout : true
         });
     }
+   
     FormulaireModifMission = () => {
         this.setState({
             modif: true
@@ -29,11 +31,14 @@ class DataTable extends Component {
             modif: false
         });
     }
+
   render() {
 
       return (
+         
           <div>
-              
+
+                 
       <Table responsive hover border="1px">
         <thead>
           <tr>
@@ -60,7 +65,9 @@ class DataTable extends Component {
                     <td>La duree estimee</td>
                           <td>
                               <div className="btn-group mr-2">
-                                  <button className="btn btn-success" >Check</button>
+                                  <Link to={"/acceuil/check"}>
+                                          <button className="btn btn-success">Check</button>
+                                      </Link>
                                   <button className="btn btn-warning" onClick={this.FormulaireModifMission}>Mod</button>
                                   <button className="btn btn-danger" >Suppr</button>
                               </div>
@@ -77,8 +84,12 @@ class DataTable extends Component {
                     <td>La duree estimee</td>
                           <td>
                               <div className="btn-group mr-2">
-                                  <button className="btn btn-success"  >Check</button>
-                                  <button className="btn btn-warning" onClick={this.FormulaireModifMission} >Mod</button>
+                                 
+                                  <Link to={"/acceuil/check"}>
+                                          <button className="btn btn-success">Check</button>
+                                      </Link>
+                                 
+                                   <button className="btn btn-warning" onClick={this.FormulaireModifMission} >Mod</button>
                                   <button className="btn btn-danger">Suppr</button>
                               </div>
                           </td>
@@ -94,7 +105,9 @@ class DataTable extends Component {
                     <td>La duree estimee</td>
                           <td>
                               <div className="btn-group mr-2">
-                                  <button className="btn btn-success" >Check</button>
+                                  <Link to={"/acceuil/check"}>
+                                      <button className="btn btn-success">Check</button>
+                                  </Link>
                                   <button className="btn btn-warning" onClick={this.FormulaireModifMission}>Mod</button>
                                   <button className="btn btn-danger" >Suppr</button>
                               </div>
@@ -105,13 +118,14 @@ class DataTable extends Component {
               <AjouterMission show={this.state.ajout} clicked={this.CancelFormulaire}>
               </AjouterMission>
               <ModifierMission show={this.state.modif} clicked={this.CancelFormulaireModif}>
-              </ModifierMission>
-            
-              <button className="btn btn-lg btn-dark btn-block" onClick={this.FormulaireAjoutMission}
+                  </ModifierMission>
                   
+            
+              <button className="btn btn-lg btn-dark btn-block" onClick={this.FormulaireAjoutMission}          
               > Ajouter une mission
                   </button>
-                
+                  
+           
             </div>
     )
   }

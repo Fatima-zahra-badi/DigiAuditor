@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src"
+    "\\src",
+    "\\src\\PageAcceuil"
   ],
-  "SelectedNode": "\\src\\assets",
+  "SelectedNode": "\\src\\GestionMissions",
   "PreviewInSolutionExplorer": false
 }
